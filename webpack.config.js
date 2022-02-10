@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         index: [
             '/index.pug',
-            '/index.js'
+            '/index.js',
+            '/style.sass'
         ]
     },
     output: {
