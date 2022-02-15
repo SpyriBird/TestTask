@@ -1,21 +1,23 @@
-form.reg-form
-    h1.reg-form__main-heading fill the form
-    label.reg-form__label
-        h2.reg-form__heading Enter your name
-        input(type="text", name="", placeholder="Name").reg-form__input
-    label.reg-form__label
-        h2.reg-form__heading Your surname
-        input(type="text", name="", placeholder="Surname").reg-form__input
-    label.reg-form__label
-        h2.reg-form__heading Your email
-        input(type="email", name="", placeholder="Email").reg-form__input
-    label.reg-form__label
-        h2.reg-form__heading Create a password
-        input(type="password", name="", placeholder="Password").reg-form__input
-    label.reg-form__label
-        h2.reg-form__heading Repeat your password
-        input(type="password", name="", placeholder="Password again").reg-form__input
-    label.reg-form__label
-        h2.reg-form__heading Enter your birthday
-        input(type="date", name="").reg-form__input
-    button(type="submit").reg-form__button submit
+form(name="reg").reg-form
+    h1.reg-form__heading Заполните форму
+    ul.reg-form__list
+        li.reg-form__item 
+            label.reg-form__label Ваше имя
+                input(type="text", name="name", required placeholder="Имя").reg-form__input
+        li.reg-form__item 
+            label.reg-form__label Фамилия
+                input(type="text", name="surname", required placeholder="Фамилия").reg-form__input
+        li.reg-form__item 
+            label.reg-form__label Ваш Еmail
+                input(type="email", name="email", required placeholder="Email").reg-form__input
+        li.reg-form__item 
+            label.reg-form__label Придумайте пароль
+                input(type="password", name="password1", required placeholder="Пароль").reg-form__input
+        li.reg-form__item 
+            label.reg-form__label Повторите пароль
+                input(type="password", name="password2", required placeholder="Снова пароль").reg-form__input
+        li.reg-form__item 
+            label.reg-form__label Дата рождения
+                input(type="date", name="birthday").reg-form__input
+        li.reg-form__item
+            button(type="submit" name="submit" disabled).reg-form__button Отправить
