@@ -4,29 +4,88 @@
     font-size: 1rem
     background-color: lightsteelblue
     width: 30%
-    min-width: 250px
+    min-width: 350px
     border-radius: 10px
     box-shadow: 0 0 15px 30px lightsteelblue
     padding: 1rem
 
-    &__main-heading
+    &__heading
         text-transform: uppercase
         text-align: center
+
+    &__list
+        list-style: none
+        padding: 0 4rem 0 2rem 
     
     &__label
 
-    &__heading
+    &__item
+        font-size: 1.4rem
         margin: .5rem 0
 
+        &:last-of-type
+            text-align: right
+
+
     &__input
-        border: 1px solid dimgray
+        display: block
+        border: 2px solid cadetblue
         background-color: snow
         border-radius: 4px
         padding: .5rem
-        width: 80%
+        width: 100%
+        box-sizing: border-box
+        outline: none
+        margin-top: .4rem
+        cursor: text
+        color: black
+        font-size: 1rem
+
         &::placeholder
+            font-size: 1rem
+
+        &:focus
+            background-color: white
+            border: 2px solid indigo
 
     
     &__button
+        outline: none
+        padding: .5rem 1rem
+        border-radius: 4px
+        font-size: 1.2rem
+        border: 2px solid cadetblue
         
+        &:enabled
+            background-color: white
 
+        &:disabled
+            background-color: show
+
+    &__tip
+        position: absolute
+        background-color: white
+        border: 2px solid red
+        font-size: 1rem
+        padding: .5rem
+        box-sizing: border-box
+        border-radius: 4px
+            
+
+
+::-webkit-datetime-edit
+::-webkit-datetime-edit-fields-wrapper
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-year-field
+    font-size: 1rem
+    color: grey
+    text-transform: uppercase
+::-webkit-inner-spin-button
+::-webkit-calendar-picker-indicator
+    display: none
+
+.reg-form__input_incorrect, 
+.reg-form__input_incorrect:focus
+    border: 2px red solid
