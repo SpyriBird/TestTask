@@ -1,9 +1,9 @@
-form(name="reg").reg-form
+form(name="reg" onsubmit="alert('submit!'); return false").reg-form
     h1.reg-form__heading Заполните форму
     ul.reg-form__list
         li.reg-form__item 
             label.reg-form__label Ваше имя
-                input(type="text", name="name", required placeholder="Имя").reg-form__input
+                input(type="text", name="name", required placeholder="Имя" autofocus).reg-form__input
         li.reg-form__item 
             label.reg-form__label Фамилия
                 input(type="text", name="surname", required placeholder="Фамилия").reg-form__input

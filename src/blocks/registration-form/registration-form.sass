@@ -16,8 +16,6 @@
     &__list
         list-style: none
         padding: 0 4rem 0 2rem 
-    
-    &__label
 
     &__item
         font-size: 1.4rem
@@ -25,7 +23,6 @@
 
         &:last-of-type
             text-align: right
-
 
     &__input
         display: block
@@ -60,7 +57,7 @@
             background-color: white
 
         &:disabled
-            background-color: show
+            background-color: snow
 
     &__tip
         position: absolute
@@ -70,11 +67,8 @@
         padding: .5rem
         box-sizing: border-box
         border-radius: 4px
+        text-align: justify
             
-
-
-::-webkit-datetime-edit
-::-webkit-datetime-edit-fields-wrapper
 ::-webkit-datetime-edit-text,
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-day-field,
@@ -82,10 +76,15 @@
     font-size: 1rem
     color: grey
     text-transform: uppercase
-::-webkit-inner-spin-button
 ::-webkit-calendar-picker-indicator
     display: none
 
 .reg-form__input_incorrect, 
 .reg-form__input_incorrect:focus
     border: 2px red solid
+
+.datetime-edit-field
+    color: red
+
+.datetime-input-box-wrapper
+    background-color: yellow

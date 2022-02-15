@@ -1,11 +1,5 @@
-let val = require('./blocks/registration-form/form-validation')
+let FormController = require('./blocks/registration-form/form-controller');
+let inputModelsCollection = require('./blocks/registration-form/input-models-collection');
+let inputViewsCollection = require('./blocks/registration-form/input-views-collection');
 
-document.addEventListener('change', (event) => val.handleChange(event));
-
-document.addEventListener('focusin', (event) => {
-    if (event.target.value === '') {
-        val.clearTips();
-    } else {
-        val.handleChange(event);
-    }
-});
+new FormController(inputModelsCollection, inputViewsCollection);
