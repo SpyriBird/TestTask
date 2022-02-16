@@ -31,7 +31,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             inject: 'body',
             filename: 'index.html',
-            minify: false,
+            minify: true,
             template: 'index.pug',
             chunks: ['index']
         }),
