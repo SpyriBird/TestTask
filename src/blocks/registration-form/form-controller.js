@@ -10,7 +10,25 @@ class FormController {
             view.input.addEventListener('change', this.onChangeValidate.bind(this));
             view.input.addEventListener('focus', this.onFocusShowTip.bind(this));
             view.input.addEventListener('blur', this.onBlurClearTip.bind(this));
+
+            if (view.input.value !== '') {
+                this.onChangeValidate({ target: view.input });
+            }
         }
+
+        this.inputViews.password1.input.addEventListener('change', this.validatePassword2.bind(this));
+    }
+
+    validatePassword2() {
+
+        let input = this.inputViews.password2.input;
+
+        if (input.value) {
+
+            this.onChangeValidate({ target: input });
+            this.inputViews.password2.clearTip();
+        }
+
     }
 
     onChangeValidate(event) {
@@ -35,12 +53,14 @@ class FormController {
             view.highlight();
             model.status = false;
             view.showTip(res);
+            this.inputViews.name.input.form.submit.disabled = true;
         }
     }
 
     updateStatus() {
 
         let status = true;
+
         for (let i of Object.values(this.inputModels)) {
 
             status = i.status && status;
